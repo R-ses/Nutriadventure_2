@@ -18,7 +18,8 @@ public class Swipe_motion : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	}
 	
 	
-	public Tool ITEM;
+	public Tool[] ITEM;
+	public int Tool_Selector=0;
 	public Image drag_space;
 	public Shooter shooter;
 	private float Dirr;
@@ -47,7 +48,7 @@ public class Swipe_motion : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 	{
 		if(selecter.getState())
 		{
-		Tool tool = Instantiate(ITEM,shooter.transform.position,Quaternion.identity);
+		Tool tool = Instantiate(ITEM[Tool_Selector],shooter.transform.position,Quaternion.identity);
 		Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
 		Rigidbody rg_tool = tool.GetComponent<Rigidbody>();
 

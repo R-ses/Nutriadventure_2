@@ -12,6 +12,15 @@ public class G_Foes : Foes
     public int Cereales;
     public int Dulces;
     public int lacteos;
+	
+	
+	
+	void OnTriggerEnter(Collider other)
+	{
+		
+			
+		
+	}
 
 
 	public G_Foes(string name, int points){

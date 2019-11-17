@@ -15,9 +15,9 @@ public class Spawner : MonoBehaviour
  	
 
 
-	private string[,] lista_comida = new string[,] {{"Banana","ManzanaM","NaranajaM","NaranjaC","Paleta"},//Desayuno
-													  {"Carne","ManzanaM","NaranajaM","NaranjaC","Paleta"},//comida
-													  {"Carne","ManzanaM","NaranajaM","NaranjaC","Paleta"}};//Cena
+	private string[,] lista_comida = new string[,] {{"Banana","ManzanaM","NaranajaM","NaranjaC","Paleta","Eggs","Leche",},//Desayuno
+													  {"Carne","ManzanaM","NaranajaM","NaranjaC","Paleta","Pollo","Sandia"},//comida
+													  {"Carne","ManzanaM","NaranajaM","NaranjaC","Paleta","Pollo","Pepino"}};//Cena
 
 
 
@@ -39,11 +39,11 @@ public class Spawner : MonoBehaviour
 			ct_frame = 0;
 			ct_sec++;
 			
-			if(ct_sec == 5)
+			if(ct_sec == 2)
 			{
 			
 				ct_sec = 0;
-				if(ct_enemies <= 15)
+				if(ct_enemies <= 20)
 					Spawn();
 			
 			}
@@ -55,7 +55,7 @@ public class Spawner : MonoBehaviour
 	public void Spawn()
 	{
 
-		G_Foes food = Resources.Load(lista_comida[0,Random.Range(0,5)],typeof(G_Foes))as G_Foes;
+		G_Foes food = Resources.Load(lista_comida[0,Random.Range(0,7)],typeof(G_Foes))as G_Foes;
 		Instantiate(food,Spawn_position(),Quaternion.identity);
 		//Debug.Log(food.name);
 		Foe_List.Add(food);

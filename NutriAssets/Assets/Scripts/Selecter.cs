@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Selecter : MonoBehaviour
 {
     private Gyroscope gyro;
@@ -9,15 +9,18 @@ public class Selecter : MonoBehaviour
     public GameObject DESTROY;
     RaycastHit hitInfo;
     RaycastHit HCInfo;
+	GameObject ob;
     public bool selected = false;
     public bool account = false;
-    void Selected()
+    public Text nombre;
+   
+   void Selected()
     {
 
 		gyro.enabled = false;
         EAT.SetActive(true);
         DESTROY.SetActive(true);
-        
+       
 
     }
 
@@ -31,21 +34,28 @@ public class Selecter : MonoBehaviour
         gyro.enabled = true;
         EAT.SetActive(false);
         DESTROY.SetActive(false);
-        Debug.Log("A comer");
-        GameObject ob = HCInfo.transform.gameObject;
+        //Debug.Log("A comer");
+        ob = HCInfo.transform.gameObject;
         Debug.Log(ob.name);
        // Destroy(ob);
         selected = true;
         account = true;
     }
+	
+	public void Disapear()
+	{
+		
+		Destroy(ob);
+		
+	}
 
     public void Discard()
     {
         gyro.enabled = true;
         EAT.SetActive(false);
         DESTROY.SetActive(false);
-        Debug.Log("Al hielo <the godfather>");
-        GameObject ob = HCInfo.transform.gameObject;
+        //Debug.Log("Al hielo <the godfather>");
+        ob = HCInfo.transform.gameObject;
         Debug.Log(ob.name);
         //Destroy(ob);
         selected = true;
@@ -73,12 +83,20 @@ public class Selecter : MonoBehaviour
                 {
                     Selected();
                     HCInfo = hitInfo;
-                    Debug.Log("object hit");
+                    nombre.text = HCInfo.transform.gameObject.GetComponent<G_Foes>().Name;
+                    //Debug.Log("object hit");
                 }
 
 
              }
         }
 
-    }
+	}
+	public void Set_selected()
+	{
+	
+	selected = false;
+    account = false;
+		
+	}
 }
