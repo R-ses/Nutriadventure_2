@@ -122,11 +122,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c002d144d0bca984ab19539af87e88f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: B_Egg
+  Name: Huevo Cocido
   Points: 10
   Verduras: 0
   Frutas: 0
-  Animal: 10
+  Animal: 0.5
   Cereales: 0
   Dulces: 0
   lacteos: 0

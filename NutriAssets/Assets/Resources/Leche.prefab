@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6899694579509806173}
   - component: {fileID: 2636317242829351874}
   m_Layer: 0
-  m_Name: lecheModel
+  m_Name: Leche
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,4 +129,4 @@ MonoBehaviour:
   Animal: 0
   Cereales: 0
   Dulces: 0
-  lacteos: 20
+  lacteos: 1

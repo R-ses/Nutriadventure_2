@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8830732004700920358}
   - component: {fileID: 1572748324344018689}
   m_Layer: 0
-  m_Name: yogurtModel
+  m_Name: Yogurt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   Animal: 0
   Cereales: 0
   Dulces: 0
-  lacteos: 20
+  lacteos: 1
 --- !u!54 &8830732004700920358
 Rigidbody:
   m_ObjectHideFlags: 0

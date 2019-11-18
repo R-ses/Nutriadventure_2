@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1514355967859475141}
   - component: {fileID: 141028213363453895}
   m_Layer: 0
-  m_Name: candyModel
+  m_Name: Dulce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Candy
-  Points: -10
+  Points: -30
   Verduras: 0
   Frutas: 0
   Animal: 0

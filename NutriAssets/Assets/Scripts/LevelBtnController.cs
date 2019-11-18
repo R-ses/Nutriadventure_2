@@ -201,15 +201,15 @@ public class LevelBtnController : MonoBehaviour
         //Que tipos de cosas pueden o no salir
         switch(current){
             case GoalsStates.Desayuno:
-                //SceneManager.LoadScene("GameDesayuno");
+                SceneManager.LoadScene("Game");
             break;
 
             case GoalsStates.Comida:
-               //SceneManager.LoadScene("GameComida");
+               SceneManager.LoadScene("GameComida");
             break;
 
             case GoalsStates.Cena:
-                //SceneManager.LoadScene("GameCena");
+                SceneManager.LoadScene("GameCena");
             break;
         }
 

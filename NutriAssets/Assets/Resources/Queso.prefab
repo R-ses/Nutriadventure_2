@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5907687427757946700}
   - component: {fileID: 7081480835700915744}
   m_Layer: 0
-  m_Name: cheeseModel
+  m_Name: Queso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,4 +129,4 @@ MonoBehaviour:
   Animal: 0
   Cereales: 0
   Dulces: 0
-  lacteos: 20
+  lacteos: 1

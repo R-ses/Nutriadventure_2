@@ -7,6 +7,14 @@ public class Selecter : MonoBehaviour
     private Gyroscope gyro;
     public GameObject EAT;
     public GameObject DESTROY;
+    public GameObject Switcher;
+
+    public GameObject Bomb;
+    public GameObject Rocket;
+    public GameObject Fork;
+    public GameObject Spoon;
+    
+    public Swipe_motion SM;
     RaycastHit hitInfo;
     RaycastHit HCInfo;
 	GameObject ob;
@@ -21,6 +29,7 @@ public class Selecter : MonoBehaviour
         EAT.SetActive(true);
         DESTROY.SetActive(true);
        
+       
 
     }
 
@@ -34,18 +43,76 @@ public class Selecter : MonoBehaviour
         gyro.enabled = true;
         EAT.SetActive(false);
         DESTROY.SetActive(false);
+        Switcher.SetActive(true);
+        
+
         //Debug.Log("A comer");
         ob = HCInfo.transform.gameObject;
         Debug.Log(ob.name);
        // Destroy(ob);
         selected = true;
         account = true;
+        switch_panel();
+    }
+
+    void switch_panel()
+    {
+    if(account)
+        {
+
+        if(SM.Tool_Selector == 0)
+        {
+            Spoon.SetActive(true);
+            Fork.SetActive(false);
+            Bomb.SetActive(false);
+            Rocket.SetActive(false);
+        }
+        else
+        {
+            Spoon.SetActive(false);
+            Fork.SetActive(true);
+            Bomb.SetActive(false);
+            Rocket.SetActive(false);
+        }
+        }
+        else
+        {
+       if(SM.Tool_Selector == 0)
+        {
+            Spoon.SetActive(false);
+            Fork.SetActive(false);
+            Bomb.SetActive(true);
+            Rocket.SetActive(false);
+        }
+        else
+        {
+            Spoon.SetActive(false);
+            Fork.SetActive(false);
+            Bomb.SetActive(false);
+            Rocket.SetActive(true);
+        }
+        }
+
+    }
+    public void Switch_weapon()
+    {
+
+        SM.Tool_Selector++;
+        SM.Tool_Selector = SM.Tool_Selector%2;
+        
+        switch_panel();
+
+
+        
+
+
     }
 	
 	public void Disapear()
 	{
 		
 		Destroy(ob);
+        nombre.text = "";
 		
 	}
 
@@ -54,18 +121,22 @@ public class Selecter : MonoBehaviour
         gyro.enabled = true;
         EAT.SetActive(false);
         DESTROY.SetActive(false);
+        Switcher.SetActive(true);
+        
         //Debug.Log("Al hielo <the godfather>");
         ob = HCInfo.transform.gameObject;
         Debug.Log(ob.name);
         //Destroy(ob);
         selected = true;
         account = false;
+        switch_panel();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         gyro = Input.gyro;
+        SM = FindObjectOfType<Swipe_motion>();
     }
 
     // Update is called once per frame

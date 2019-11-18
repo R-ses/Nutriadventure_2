@@ -123,9 +123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Cereza
-  Points: 3
+  Points: 30
   Verduras: 0
-  Frutas: 3
+  Frutas: 0.15
   Animal: 0
   Cereales: 0
   Dulces: 0

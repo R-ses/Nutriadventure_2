@@ -9,12 +9,14 @@ public class Tool : MonoBehaviour
 	public GameObject myself;
     Selecter selecter;
 	Scoreboard SB;
+	Spawner SP;
     // Start is called before the first frame update
     void Start()
     {
         ct_killswitch = 0;
 		selecter = FindObjectOfType<Selecter>();
 		SB =  FindObjectOfType<Scoreboard>();
+		SP = FindObjectOfType<Spawner>();
 	}
 	
     void OnTriggerEnter(Collider other)
@@ -22,6 +24,7 @@ public class Tool : MonoBehaviour
 		selecter.Set_selected();
 		SB.update_score(other.transform.gameObject.GetComponent<G_Foes>());
 		SB.Update_Sprites();
+		SP.remove_foe(other.transform.gameObject.GetComponent<G_Foes>());
 		selecter.Disapear();
 		Debug.Log("Collision");
         //Delete at the end of the collition

@@ -93,8 +93,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Pepino
-  Points: 5
-  Verduras: 5
+  Points: 30
+  Verduras: 0.5
   Frutas: 0
   Animal: 0
   Cereales: 0

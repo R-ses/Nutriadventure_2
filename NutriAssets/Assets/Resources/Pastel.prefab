@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7396739102042071706}
   - component: {fileID: 6888434386336388627}
   m_Layer: 0
-  m_Name: cakeModel
+  m_Name: Pastel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Pastel
-  Points: -15
+  Points: -80
   Verduras: 0
   Frutas: 0
   Animal: 0

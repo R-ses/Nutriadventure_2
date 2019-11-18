@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Paleta
-  Points: -5
+  Points: -50
   Verduras: 0
   Frutas: 0
   Animal: 0

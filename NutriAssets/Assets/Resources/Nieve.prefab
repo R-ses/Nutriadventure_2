@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8527988323555674889}
   - component: {fileID: 2856658930538838943}
   m_Layer: 0
-  m_Name: iceCreamModel
+  m_Name: Nieve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   Animal: 0
   Cereales: 0
   Dulces: 0
-  lacteos: 15
+  lacteos: 0.3
 --- !u!54 &8527988323555674889
 Rigidbody:
   m_ObjectHideFlags: 0

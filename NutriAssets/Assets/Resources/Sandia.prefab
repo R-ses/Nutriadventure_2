@@ -93,9 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Sandia
-  Points: 5
+  Points: 40
   Verduras: 0
-  Frutas: 5
+  Frutas: 0.25
   Animal: 0
   Cereales: 0
   Dulces: 0
